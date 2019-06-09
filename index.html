@@ -9,50 +9,56 @@
     <body>
         <h1>Processing project by Maria Annunziata Giannotti</h1>
         <script type="text/processing">
-  // Write your project here
-            
-            // Example
-            float angolo;
-            float angolo01;
-            
-            void setup() {
-              size(640,482,P3D);
-              background(255);
-            }
-            
-            void draw(){
-              
-  angolo += 0.04;
-  angolo01 = angolo + 0.001;
-  
-  pushMatrix();
-  translate(78,65);
-  rotateZ(angolo+10);
-  rotateY(angolo+10);
-  rectMode(CENTER);
-  rect(20,40,60,-90);
-  fill (255, 0, 0);
-  fill (frameCount*20 %500);
+<html><body><pre>
 
-  
-  popMatrix();
-  translate(300,250,-30);
-  rotateX(angolo);
-  box(70);
-  fill (0,0,100);
-  
-  pushMatrix();
-  
-  rect(40, 40, 55, 55, 7);
-  fill (255,0,0);
+<span style="color: #E2661A;">float</span> angolo, angolo01;
+<span style="color: #E2661A;">PImage</span> immaginesfondo;
 
-  
-  popMatrix();
-  translate(300,150,-30);
-  rotateX(angolo01);
-  circle(50,30,70);
-  fill (0,255,0);
-            }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">size</span>(640,482,<span style="color: #718A62;">P3D</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">String</span> url = <span style="color: #7D4793;">&quot;https://www.focusjunior.it/content/uploads/site_stored/imgs/0001/035/lavagna.jpg&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;immaginesfondo&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span> (url, <span style="color: #7D4793;">&quot;jpg&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span> (immaginesfondo);
+angolo&nbsp;=&nbsp;0;&nbsp;
+angolo01=&nbsp;20;
+&nbsp;}
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>(){
+&nbsp;
+&nbsp;&nbsp;angolo&nbsp;+=&nbsp;0.04;
+&nbsp;&nbsp;angolo01&nbsp;=&nbsp;angolo&nbsp;+&nbsp;0.001;
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(78,65);
+&nbsp;&nbsp;<span style="color: #006699;">rotateZ</span>(angolo+10);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angolo+10);
+&nbsp;&nbsp;<span style="color: #006699;">rectMode</span>(<span style="color: #718A62;">CENTER</span>);
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(20,40,60,-90);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span> (255, 0, 0);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span> (<span style="color: #D94A7A;">frameCount</span>*20 %500);
+
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(300,250,-30);
+&nbsp;&nbsp;<span style="color: #006699;">rotateX</span>(angolo);
+&nbsp;&nbsp;<span style="color: #006699;">box</span>(70);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span> (0,0,100);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(40, 40, 55, 55, 7);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span> (255,0,0);
+
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(300,150,-30);
+&nbsp;&nbsp;<span style="color: #006699;">rotateX</span>(angolo01);
+&nbsp;&nbsp;circle(50,30,70);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span> (0,255,0);
+&nbsp;&nbsp;&nbsp;&nbsp;
+}
+
+</pre></body></html>
             
         </script>
         <canvas></canvas>
