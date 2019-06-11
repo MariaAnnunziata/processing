@@ -10,16 +10,19 @@
         <h1>Processing project by Maria Annunziata Giannotti</h1>
         <script type="text/processing">
 
+
 float angolo, angolo01;
 PImage immaginesfondo;
 
-void setup() {
-              size(640, 482);
-              background(130);
-            }
-          
-            
-            
+void setup(){
+           size(640,482,P3D);
+           String url = "https://www.focusjunior.it/content/uploads/site_stored/imgs/0001/035/lavagna.jpg";
+          immaginesfondo = loadImage (url, "jpg");
+          background (immaginesfondo);
+angolo = 0; 
+angolo01= 20;
+ }
+
 void draw(){
  
   angolo += 0.04;
@@ -29,7 +32,10 @@ void draw(){
   translate(78,65);
   rotateZ(angolo+10);
   rotateY(angolo+10);
+  rectMode(CENTER);
+  rect(20,40,60,-90);
   fill (255, 0, 0);
+  fill (frameCount*20 %500);
 
   
   popMatrix();
@@ -37,18 +43,20 @@ void draw(){
   rotateX(angolo);
   box(70);
   fill (0,0,100);
+  
   pushMatrix();
   
+  rect(40, 40, 55, 55, 7);
+  fill (255,0,0);
 
   
   popMatrix();
   translate(300,150,-30);
   rotateX(angolo01);
-  ellipse(50,30,70);
+  circle(50,30,70);
   fill (0,255,0);
-
-          
-
+    
+}
             
         </script>
         <canvas></canvas>
